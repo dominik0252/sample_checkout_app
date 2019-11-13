@@ -1,0 +1,2 @@
+class UsingPromotion < BasketItem
+end

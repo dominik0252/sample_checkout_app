@@ -1,0 +1,2 @@
+class PurchasingItem < BasketItem
+end

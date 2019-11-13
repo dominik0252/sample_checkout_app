@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Sample User
+  email: sample_user@example.com
+  street: Petrinjska
+  house_number: 1A
+  city: Zagreb
+  zip_code: 10000
+  country: Croatia
+
+two:
+  name: Another User
+  email: another_user@example.com
+  street: Patockova
+  house_number: 101
+  city: Prague
+  zip_code: 16900
+  country: Czechia

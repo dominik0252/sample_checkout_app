@@ -1,0 +1,2 @@
+class UsedPromotion < CustomerOrderItem
+end

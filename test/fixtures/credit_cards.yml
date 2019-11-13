@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1234-5678-9012-3456
+  valid_until_month: 1
+  valid_until_year: 2020
+  customer: one
+
+two:
+  number: 6543-2109-8765-4321
+  valid_until_month: 2
+  valid_until_year: 2021
+  customer: two
