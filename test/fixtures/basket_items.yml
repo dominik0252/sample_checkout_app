@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  basket: one
-  type: 
-  item: one
-  promotion: one
-
-two:
-  basket: two
-  type: 
-  item: two
-  promotion: two
+# one:
+#   basket: one
+#   type:
+#   item: one
+#   promotion: one
+#
+# two:
+#   basket: two
+#   type:
+#   item: two
+#   promotion: two

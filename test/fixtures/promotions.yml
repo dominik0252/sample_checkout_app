@@ -1,19 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  type: 
-  percentage_off: 1.5
-  amount_off: 1.5
-  conjunction: false
-  item_id: 1
-  item_quantity: 1
-  total_amount: 1.5
-
-two:
-  type: 
-  percentage_off: 1.5
-  amount_off: 1.5
-  conjunction: false
-  item_id: 1
-  item_quantity: 1
-  total_amount: 1.5
+# one:
+#   type:
+#   percentage_off: 1.5
+#   amount_off: 1.5
+#   conjunction: false
+#   item_id: 1
+#   item_quantity: 1
+#   total_amount: 1.5
+#
+# two:
+#   type:
+#   percentage_off: 1.5
+#   amount_off: 1.5
+#   conjunction: false
+#   item_id: 1
+#   item_quantity: 1
+#   total_amount: 1.5

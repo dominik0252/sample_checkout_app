@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  customer_order: one
-  type: 
-  item: one
-  promotion: one
-  total_amount: 1.5
-
-two:
-  customer_order: two
-  type: 
-  item: two
-  promotion: two
-  total_amount: 1.5
+# one:
+#   customer_order: one
+#   type:
+#   item: one
+#   promotion: one
+#   total_amount: 1.5
+#
+# two:
+#   customer_order: two
+#   type:
+#   item: two
+#   promotion: two
+#   total_amount: 1.5
