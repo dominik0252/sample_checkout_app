@@ -1,0 +1,3 @@
+%li
+  ="#{item.name} - #{item.price_eur}€"
+  =link_to "Add to basket", basket_items_url( basket_item: { type: 'PurchasingItem', basket_id: @basket.id, item_id: item.id }), method: :post

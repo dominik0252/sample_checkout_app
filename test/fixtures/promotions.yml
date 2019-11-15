@@ -1,19 +1,46 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   type:
-#   percentage_off: 1.5
-#   amount_off: 1.5
-#   conjunction: false
-#   item_id: 1
-#   item_quantity: 1
-#   total_amount: 1.5
-#
-# two:
-#   type:
-#   percentage_off: 1.5
-#   amount_off: 1.5
-#   conjunction: false
-#   item_id: 1
-#   item_quantity: 1
-#   total_amount: 1.5
+twenty_pct_off:
+  type: Code
+  percentage_off: 20
+  amount_off: nil
+  conjunction: false
+  item_id: nil
+  item_quantity: nil
+  total_amount: nil
+
+five_pct_off:
+  type: Code
+  percentage_off: 5
+  amount_off: nil
+  conjunction: true
+  item_id: nil
+  item_quantity: nil
+  total_amount: nil
+
+twenty_eur_off:
+  type: Code
+  percentage_off: nil
+  amount_off: 20
+  conjunction: true
+  item_id: nil
+  item_quantity: nil
+  total_amount: nil
+
+three_motion_sensors:
+  type: Quantity
+  percentage_off: nil
+  amount_off: nil
+  conjunction: true
+  item_id: 2
+  item_quantity: 3
+  total_amount: 65.00
+
+two_smoke_sensors:
+  type: Quantity
+  percentage_off: nil
+  amount_off: nil
+  conjunction: true
+  item_id: 4
+  item_quantity: 2
+  total_amount: 35.00

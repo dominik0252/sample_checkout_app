@@ -1,0 +1,6 @@
+%li
+  -if !code.percentage_off.nil?
+    ="#{code.percentage_off}% off final cost (#{code.conjunction? ? 'can' : 'cannot'} be used in conjunction with other codes)"
+  -elsif !code.amount_off.nil?
+    ="#{code.amount_off}€ off final cost (#{code.conjunction? ? 'can' : 'cannot'} be used in conjunction with other codes)"
+  =link_to "Apply Promotion", basket_items_url( basket_item: { type: 'UsingPromotion', basket_id: @basket.id, promotion_id: code.id } ), method: :post

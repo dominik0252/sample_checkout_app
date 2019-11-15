@@ -1,9 +1,26 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   name: MyString
-#   price_eur: 1.5
-#
-# two:
-#   name: MyString
-#   price_eur: 1.5
+smart_hub:
+  id: 1
+  name: Smart Hub
+  price_eur: 49.99
+
+motion_sensor:
+  id: 2
+  name: Motion Sensor
+  price_eur: 24.99
+
+wireless_camera:
+  id: 3
+  name: Wireless Camera
+  price_eur: 99.99
+
+smoke_sensor:
+  id: 4
+  name: Smoke Sensor
+  price_eur: 19.99
+
+water_leak_sensor:
+  id: 5
+  name: Water Leak Sensor
+  price_eur: 14.99
