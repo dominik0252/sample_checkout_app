@@ -11,5 +11,8 @@
     %header.navbar.navbar-fixed-top
       .container
         =link_to 'Sample Checkout App', root_url, id: 'logo'
+        #current_weather
+          =CGI.unescape_html "Zagreb, #{current_temperature}&#176;C"
+          =image_tag("http://openweathermap.org/img/wn/#{current_weather_icon}@2x.png",size:40)
     .container
       = yield

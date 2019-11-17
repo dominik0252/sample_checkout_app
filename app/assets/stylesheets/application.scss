@@ -56,7 +56,14 @@ h3 {
 /* header */
 
 header {
-  background-color: #9cf7e8;
+  background-color: #5dffef;
+}
+
+#current_weather {
+  margin-top: 5px;
+  float: right;
+  font-weight: bold;
+  color: #f9fbfb;
 }
 
 #logo {
@@ -69,7 +76,7 @@ header {
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #f9fbfb;
     text-decoration: none;
   }
 }
@@ -122,7 +129,7 @@ input {
   list-style: none;
   margin: 0;
   :hover {
-    background-color: #edf7ff;
+    background-color: #e9fdfe;
   }
   li {
     overflow: auto;
