@@ -45,13 +45,6 @@ class CustomerTest < ActiveSupport::TestCase
     assert_not @sample_customer.valid?
   end
 
-  test "should have at least one credit card" do
-    @sample_credit_card = credit_cards(:one)
-    @sample_credit_card.customer_id = @another_customer.id
-    @sample_credit_card.save
-    assert_not @sample_customer.valid?
-  end
-
   test "email validation should accept valid addresses" do
     valid_addresses = %w[ user@example.com USER@foo.COM A_US-ER@foo.bar.org
                           first.last@foo.jp alice+bob@baz.cn ]

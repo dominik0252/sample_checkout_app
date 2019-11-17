@@ -1,13 +1,57 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   basket: one
-#   type:
-#   item: one
-#   promotion: one
-#
-# two:
-#   basket: two
-#   type:
-#   item: two
-#   promotion: two
+<% 2.times do |n| %>
+smart_hub_<%= n %>:
+  basket_id: 2
+  type: PurchasingItem
+  item_id: 1
+  promotion_id:
+<% end %>
+
+<% 5.times do |n| %>
+motion_sensor_<%= n %>:
+  basket_id: 2
+  type: PurchasingItem
+  item_id: 2
+  promotion_id:
+<% end %>
+
+wireless_camera:
+  basket_id: 2
+  type: PurchasingItem
+  item_id: 3
+  promotion_id:
+
+<% 5.times do |n| %>
+smoke_sensor_<%= n %>:
+  basket_id: 2
+  type: PurchasingItem
+  item_id: 4
+  promotion_id:
+<% end %>
+
+three_motion_sensors:
+  basket_id: 2
+  type: UsingPromotion
+  item_id:
+  promotion_id: 4
+
+<% 2.times do |n| %>
+two_smoke_sensors_<%= n %>:
+  basket_id: 2
+  type: UsingPromotion
+  item_id:
+  promotion_id: 5
+<% end %>
+
+twenty_eur_off:
+  basket_id: 2
+  type: UsingPromotion
+  item_id:
+  promotion_id: 3
+
+five_pct_off:
+  basket_id: 2
+  type: UsingPromotion
+  item_id:
+  promotion_id: 2

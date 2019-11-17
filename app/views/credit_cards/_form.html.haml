@@ -1,0 +1,15 @@
+=form_for(@credit_card) do |f|
+  =render 'shared/error_messages', object: @credit_card
+
+  =hidden_field_tag :customer_id, @customer.id
+
+  =f.label :number
+  =f.text_field :number, class: 'form-control'
+
+  =f.label :valid_until_month
+  =f.text_field :valid_until_month, class: 'form-control'
+
+  =f.label :valid_until_year
+  =f.text_field :valid_until_year, class: 'form-control'
+
+  =f.submit 'Save credit card', class: "btn btn-primary"

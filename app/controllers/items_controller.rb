@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 
   private
 
-  # EFFECTS:  get applied promotions, eligible code promotions and eligible
+  # EFFECTS:  get already applied promotions, eligible code promotions and eligible
   #           quantity promotions
   def get_promotions
     if @purchasing_items.any?
@@ -22,7 +22,7 @@ class ItemsController < ApplicationController
     end
   end
 
-  # EFFECTS:  getting applied promotions to basket
+  # EFFECTS:  getting already applied promotions to basket
   def get_using_promotions
     @using_promotions = UsingPromotion.where(basket_id: @basket.id)
     if @using_promotions

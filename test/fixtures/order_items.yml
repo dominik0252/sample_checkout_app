@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# one:
+#   order: one
+#   item: one
+#   promotion: one
+#   item_quantity: 1.5
+#   item_price_eur: 1.5
+#   promotion_pct_off: 1.5
+#   promotion_amt_off: 1.5
+#   promotion_tot_amt: 1.5
+#
+# two:
+#   order: two
+#   item: two
+#   promotion: two
+#   item_quantity: 1.5
+#   item_price_eur: 1.5
+#   promotion_pct_off: 1.5
+#   promotion_amt_off: 1.5
+#   promotion_tot_amt: 1.5

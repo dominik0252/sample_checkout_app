@@ -1,0 +1,36 @@
+=form_for(@order) do |f|
+  =render 'shared/error_messages', object: @order
+  
+  =f.hidden_field :basket_id, value: @order.basket_id
+
+  =f.label :customer_name, 'Name'
+  =f.text_field :customer_name, class: 'form-control'
+
+  =f.label :customer_email, 'Email'
+  =f.text_field :customer_email, class: 'form-control'
+
+  =f.label :customer_street, 'Street'
+  =f.text_field :customer_street, class: 'form-control'
+
+  =f.label :customer_house_number, 'House number'
+  =f.text_field :customer_house_number, class: 'form-control'
+
+  =f.label :customer_city, 'City'
+  =f.text_field :customer_city, class: 'form-control'
+
+  =f.label :customer_zip_code, 'Zip code'
+  =f.text_field :customer_zip_code, class: 'form-control'
+
+  =f.label :customer_country, 'Country'
+  =f.text_field :customer_country, class: 'form-control'
+
+  =f.label :credit_card_number, 'Credit card number'
+  =f.text_field :credit_card_number, class: 'form-control'
+
+  =f.label :credit_card_valid_until_month, 'Credit card valid until (month)'
+  =f.text_field :credit_card_valid_until_month, class: 'form-control'
+
+  =f.label :credit_card_valid_until_year, 'Credit card valid until (year)'
+  =f.text_field :credit_card_valid_until_year, class: 'form-control'
+
+  =f.submit 'Proceed to checkout', class: "btn btn-primary"

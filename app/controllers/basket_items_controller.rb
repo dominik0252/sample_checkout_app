@@ -37,7 +37,7 @@ class BasketItemsController < ApplicationController
 
   # EFFECTS:  disables adding promotion to basket if basket is empty
   def reject_promotion_if_basket_empty
-    if BasketItem.all.empty?
+    if BasketItem.where(basket_id: @basket_item.basket_id).empty?
       flash[:danger] = "Basket is empty - promotion cannot be applied!"
       @reject = true
     end
@@ -64,11 +64,15 @@ class BasketItemsController < ApplicationController
   def reject_promotion_if_not_enough_items
     promotion = Promotion.find(@basket_item.promotion_id)
     if !promotion.item_id.nil?
-      items_count = BasketItem.where(item_id: promotion.item_id).count
+      items_count = BasketItem.where( basket_id: @basket_item.basket_id,
+                                      item_id: promotion.item_id)
+                              .count
       # count pieces of the item for which promotions already applied
       item_promotions_count = 0
       Promotion.where(item_id: promotion.item_id).each do | p |
-        item_promotions_count += BasketItem.where(promotion_id: p.id).count * promotion.item_quantity
+        item_promotions_count +=  BasketItem.where(basket_id:    @basket_item.basket_id,
+                                                  promotion_id: p.id)
+                                            .count * promotion.item_quantity
       end
 
       if items_count - item_promotions_count < promotion.item_quantity
@@ -82,12 +86,20 @@ class BasketItemsController < ApplicationController
   # EFFECTS:  removes applied quantity promotion if total quantity drops below number of items in promotion
   def remove_quantity_promotions
     if @basket_item.type == "PurchasingItem"
-      using_promotions_count = UsingPromotion.where(basket_id: @basket_item.basket_id).group(:promotion_id).count
+      using_promotions_count =  UsingPromotion.where(basket_id: @basket_item.basket_id)
+                                              .group(:promotion_id)
+                                              .count
       using_promotions_count.each do | promotion_id, cnt |
         promotion = Promotion.find(promotion_id)
-        item_cnt = BasketItem.where(item_id: @basket_item.item_id).count - 1
-        if promotion.item_id == @basket_item.item_id && cnt * promotion.item_quantity > item_cnt
-          UsingPromotion.where(basket_id: @basket_item.basket_id, promotion_id: promotion.id).first.destroy
+        item_cnt =  BasketItem.where(basket_id:  @basket_item.basket_id,
+                                    item_id:    @basket_item.item_id)
+                              .count - 1
+        if promotion.item_id == @basket_item.item_id &&
+            cnt * promotion.item_quantity > item_cnt
+          UsingPromotion.where( basket_id:    @basket_item.basket_id,
+                                promotion_id: promotion.id)
+                        .first
+                        .destroy
         end
       end
     end

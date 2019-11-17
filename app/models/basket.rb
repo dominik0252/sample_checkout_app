@@ -30,6 +30,6 @@ class Basket < ApplicationRecord
                     (total_items_amount + total_promotions_amount + total_amount_off)
     total_amount = 0 if total_amount < 0
 
-    return total_amount
+    return total_amount.round(2)
   end
 end

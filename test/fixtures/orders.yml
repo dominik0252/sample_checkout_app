@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  basket_id: 1
+  customer_id: nil
+  total_amount: 50
+  customer_name: Sample User
+  customer_email: sample_user@example.com
+  customer_street: Petrinjska
+  customer_house_number: 1A
+  customer_city: Zagreb
+  customer_zip_code: 10000
+  customer_country: Croatia
+  credit_card_number: 1234-5678-9012-3456
+  credit_card_valid_until_month: 1
+  credit_card_valid_until_year: 2050
+
+# two:
+#   basket: two
+#   customer: nil
+#   total_amount: 1.5
+#   customer_name: MyString
+#   customer_email: MyString
+#   customer_street: MyString
+#   customer_house_number: MyString
+#   customer_city: MyString
+#   customer_zip_code: MyString
+#   customer_country: MyString
+#   credit_card_number: MyString
+#   credit_card_valid_until_month: 1
+#   credit_card_valid_until_year: 1

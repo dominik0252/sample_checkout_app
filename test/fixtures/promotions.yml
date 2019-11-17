@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 twenty_pct_off:
+  id: 1
   type: Code
   percentage_off: 20
   amount_off: nil
@@ -10,6 +11,7 @@ twenty_pct_off:
   total_amount: nil
 
 five_pct_off:
+  id: 2
   type: Code
   percentage_off: 5
   amount_off: nil
@@ -19,6 +21,7 @@ five_pct_off:
   total_amount: nil
 
 twenty_eur_off:
+  id: 3
   type: Code
   percentage_off: nil
   amount_off: 20
@@ -28,6 +31,7 @@ twenty_eur_off:
   total_amount: nil
 
 three_motion_sensors:
+  id: 4
   type: Quantity
   percentage_off: nil
   amount_off: nil
@@ -37,6 +41,7 @@ three_motion_sensors:
   total_amount: 65.00
 
 two_smoke_sensors:
+  id: 5
   type: Quantity
   percentage_off: nil
   amount_off: nil

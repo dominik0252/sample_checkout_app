@@ -1,0 +1,32 @@
+%h3 Basket
+%table
+  %thead
+    %tr
+      %th Item
+      %th Quantity
+      %th Price (€)
+      %th
+  %tbody
+    -@purchasing_items_count.each do | item_id, item_quantity |
+      %tr
+        %td= @items.find(item_id).name
+        %td= item_quantity
+        %td= @items.find(item_id).price_eur
+        %td= link_to  "Remove from basket",
+                      basket_item_url( BasketItem.where(basket_id: @basket.id,
+                                                        item_id: item_id).first),
+                      method: :delete
+    -if @using_promotions_count && @using_promotions_count.any?
+      -@using_promotions_count.each do | promotion_id, item_quantity |
+        %tr
+          -code = Promotion.find(promotion_id)
+          %td= !code.percentage_off.nil? ? "#{code.percentage_off}% off" : ( !code.amount_off.nil? ? "#{code.amount_off}€ off" : "#{code.item_quantity} #{Item.find(code.item_id).name.pluralize} for #{code.total_amount}")
+          %td= item_quantity
+          %td
+          %td= link_to  "Remove from basket",
+                        basket_item_url( BasketItem.where(basket_id: @basket.id,
+                                                          promotion_id: promotion_id).first),
+                        method: :delete
+    %tr
+      %td{span: 3}="Total amount: #{@basket.calculate_total_amount}€"
+=link_to 'Checkout', new_order_path, class: 'btn btn-primary'
