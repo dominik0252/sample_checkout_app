@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 items = Item.create( [
-  { name: 'Smart Hub', price_eur: 49.99 },
-  { name: 'Motion Sensor', price_eur: 24.99 },
-  { name: 'Wireless Camera', price_eur: 99.99 },
-  { name: 'Smoke Sensor', price_eur: 19.99 },
-  { name: 'Water Leak Sensor', price_eur: 14.99 }
+  { name: 'Smart Hub', price_eur: 49.99, icon: 'smart_hub.jpg' },
+  { name: 'Motion Sensor', price_eur: 24.99, icon: 'motion_sensor.jpg' },
+  { name: 'Wireless Camera', price_eur: 99.99, icon: 'wireless_camera.jpeg' },
+  { name: 'Smoke Sensor', price_eur: 19.99, icon: 'smoke_sensor.jpg' },
+  { name: 'Water Leak Sensor', price_eur: 14.99, icon: 'water_leak_sensor.jpg' }
 ])
 
 promotions = Promotion.create( [

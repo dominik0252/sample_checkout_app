@@ -1,3 +1,3 @@
 %li
   ="#{quantity.item_quantity} #{Item.find(quantity.item_id).name.pluralize} for #{quantity.total_amount}€"
-  =link_to "Apply Promotion", basket_items_url( basket_item: { type: 'UsingPromotion', basket_id: @basket.id, promotion_id: quantity.id } ), method: :post
+  =link_to image_tag('shoppingcart_add.png', size: 32, alt: 'Apply Promotion', class: 'add_to_cart'), basket_items_url( basket_item: { type: 'UsingPromotion', basket_id: @basket.id, promotion_id: quantity.id } ), method: :post

@@ -1,3 +1,7 @@
 %li
-  ="#{item.name} - #{item.price_eur}€"
-  =link_to "Add to basket", basket_items_url( basket_item: { type: 'PurchasingItem', basket_id: @basket.id, item_id: item.id }), method: :post
+  =image_tag(item.icon, size: 48)
+  %span.item_name
+    ="#{item.name}"
+  %span.item_price
+    ="#{item.price_eur}€"
+  =link_to image_tag('shoppingcart_add.png', size: 32, alt: 'Add to basket', class: 'add_to_cart'), basket_items_url( basket_item: { type: 'PurchasingItem', basket_id: @basket.id, item_id: item.id }), method: :post

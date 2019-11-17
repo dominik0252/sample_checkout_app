@@ -9,6 +9,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     get new_order_url(basket: { id: @basket.id })
     assert_response :success
 
+    assert_select 'title', 'New Order | Sample Checkout App'
     assert_select 'h1', 'Order details'
     assert_select 'form[action=?][method=?]', '/orders', 'post' do
       # basket id must be present and hidden

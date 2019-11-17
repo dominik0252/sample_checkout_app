@@ -4,23 +4,28 @@ smart_hub:
   id: 1
   name: Smart Hub
   price_eur: 49.99
+  icon: smart_hub.jpg
 
 motion_sensor:
   id: 2
   name: Motion Sensor
   price_eur: 24.99
+  icon: motion_sensor.jpg
 
 wireless_camera:
   id: 3
   name: Wireless Camera
   price_eur: 99.99
+  icon: wireless_camera.jpeg
 
 smoke_sensor:
   id: 4
   name: Smoke Sensor
   price_eur: 19.99
+  icon: smoke_sensor.jpg
 
 water_leak_sensor:
   id: 5
   name: Water Leak Sensor
   price_eur: 14.99
+  icon: water_leak_sensor.jpg

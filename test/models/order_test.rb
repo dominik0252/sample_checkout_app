@@ -56,6 +56,21 @@ class OrderTest < ActiveSupport::TestCase
     assert_not @order.valid?
   end
 
+  test "credit card number should be present" do
+    @order.credit_card_number = "    "
+    assert_not @order.valid?
+  end
+
+  test "credit card valid until month should be present" do
+    @order.credit_card_valid_until_month = "    "
+    assert_not @order.valid?
+  end
+
+  test "credit card valid until year should be present" do
+    @order.credit_card_valid_until_year = "    "
+    assert_not @order.valid?
+  end
+
   test "customer email validation should accept valid addresses" do
     valid_addresses = %w[ user@example.com USER@foo.COM A_US-ER@foo.bar.org
                           first.last@foo.jp alice+bob@baz.cn ]

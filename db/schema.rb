@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_17_013041) do
+ActiveRecord::Schema.define(version: 2019_11_17_123619) do
 
   create_table "basket_items", force: :cascade do |t|
     t.integer "basket_id"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_013041) do
     t.float "price_eur"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
   end
 
   create_table "order_items", force: :cascade do |t|

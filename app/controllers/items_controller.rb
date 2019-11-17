@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
-
     @basket = Basket.find_or_create_by!(session_id: request.session_options[:id])
     # items in basket
     @purchasing_items = PurchasingItem.where(basket_id: @basket.id)

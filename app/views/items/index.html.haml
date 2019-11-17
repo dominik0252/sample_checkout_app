@@ -1,14 +1,16 @@
-%h1 Online Shop
+-provide(:title, 'Home')
 
-=@session_id
-
+%h3 Products
 %ul.items
   =render @items
 
 -if @purchasing_items.empty?
   %h3 Basket is empty
 -else
-  %h3 Eligible Promotions
+  -if (@codes.nil? || @codes.empty?) && (@quantities.nil? || @quantities.empty?)
+    %h3 No eligible promotions
+  -else
+    %h3 Eligible Promotions
 
   %ul.promotions
     -if @codes && @codes.any?

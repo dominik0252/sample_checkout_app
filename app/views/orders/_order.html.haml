@@ -1,22 +1,23 @@
 %h1= "Order ##{@order.id}"
 
 %h3 Order details
-%ul#order_details
+%ul.customer_details
   %li= "Name: #{@order.customer_name}"
   %li= "Email: #{@order.customer_email}"
   %li= "Address: #{@order.customer_address}"
 
 %h3 Purchased items
-%ul#purchased_items
+%ul.items
   -@order_items.where(type: 'PurchasedItem').each do | purchased_item |
     %li
       =render purchased_item
 
 %h3 Applied promotions
-%ul#applied_promotions
+%ul.promotions
   -@order_items.where(type: 'UsedPromotion').each do | used_promotion |
     %li
       =render used_promotion
 
 %h3 Total Amount
-%p= "#{@order.total_amount}€"
+%ul.total_amount
+  %li= "#{@order.total_amount}€"

@@ -49,6 +49,7 @@ class OrdersTest < ActionDispatch::IntegrationTest
       assert_equal @basket.basket_items.count, 0
       follow_redirect!
       assert_template 'orders/show'
+      assert_select 'title', "Order ##{order.id} | Sample Checkout App"
       assert_select 'h1', "Order ##{order.id}"
     end
   end

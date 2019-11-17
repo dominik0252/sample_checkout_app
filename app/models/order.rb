@@ -16,6 +16,9 @@ class Order < ApplicationRecord
   validates :customer_city, presence:true
   validates :customer_zip_code, presence:true
   validates :customer_country, presence:true
+  validates :credit_card_number, presence:true
+  validates :credit_card_valid_until_month, presence:true
+  validates :credit_card_valid_until_year, presence:true
 
   def customer_address
     self.customer_street + " " + self.customer_house_number + ", " +
