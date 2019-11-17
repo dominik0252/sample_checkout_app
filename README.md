@@ -30,6 +30,6 @@ $ rails server
 
 
 * Author: [Dominik Vidusin](mailto:dominik.vidusin@gmail.com)
-* Ruby version:   2.5.0
-* Rails version:  5.1.7
+* Ruby version:   2.6.3
+* Rails version:  5.2.3
 * Weather forecast data is collected from [OpenWeatherMap](https://openweathermap.org/)
