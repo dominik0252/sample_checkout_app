@@ -1,24 +1,35 @@
-# README
+# Sample basket checkout app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+To get started with the app, clone the repo and then install the needed gems:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Next, migrate and seed the database:
 
-* Configuration
+```
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Database creation
+Finally, run the test suite to verify that everything is working correctly:
 
-* Database initialization
+```
+$ rails test
+```
 
-* How to run the test suite
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ rails server
+```
 
-* Deployment instructions
 
-* ...
+
+* Author: [Dominik Vidusin](mailto:dominik.vidusin@gmail.com)
+* Ruby version:   2.5.0
+* Rails version:  5.1.7
+* Weather forecast data is collected from [OpenWeatherMap](https://openweathermap.org/)
